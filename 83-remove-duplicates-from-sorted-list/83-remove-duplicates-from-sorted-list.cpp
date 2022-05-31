@@ -18,7 +18,7 @@ public:
             if(iterate->val==iterate->next->val){
                 ListNode* ap = iterate->next;
                 iterate->next=iterate->next->next;
-                //free(ap);
+                delete(ap);
             }else{
                 iterate=iterate->next;
             }
