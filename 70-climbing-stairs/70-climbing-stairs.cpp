@@ -5,10 +5,11 @@ public:
         return hh(n,ab);
     }
     int hh(int n ,vector<int>&ab){
-        if(n<=1)
-            return 1;
-        if(ab[n]!=-1)
-            return ab[n];
-        return ab[n]=hh(n-1,ab)+hh(n-2,ab);
+        ab[1]=1;
+        ab[0]=1;
+        for(int i = 2 ; i <= n ; i++){
+            ab[i]=ab[i-1]+ab[i-2];
+        }
+        return ab[n];
     }
 };
