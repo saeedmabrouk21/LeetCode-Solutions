@@ -11,11 +11,10 @@ public:
                 ab.insert(x);
             }else{
                 while(s[start]!=x){
-                    cout<<x;
+               //     cout<<x;
                     ab.erase(ab.find(s[start]));
                     start++;
                 }
-              //  ab.erase(ab.find(s[start]));
                 start++;
             }
             res = max(res,end-start+1);
