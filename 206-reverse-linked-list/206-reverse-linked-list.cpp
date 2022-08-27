@@ -11,7 +11,7 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        if(!head || !head->next){
+        if(!head){
             return head;
         }
         return reversee(NULL,head);
