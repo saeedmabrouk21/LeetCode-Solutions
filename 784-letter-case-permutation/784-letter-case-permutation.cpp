@@ -16,21 +16,13 @@ public:
         vector<string> second=perm(ab,perfix,i+1);
         res.insert(res.end(), second.begin(), second.end());
         if(!(ab[i]>='0' &&ab[i]<='9')){
-            if(ab[i]==toupper(ab[i])){
-                ab[i]=tolower(ab[i]);
-            }else{
-                ab[i]=toupper(ab[i]);
-            }
+           
+            ab[i]^=32;
             perfix.pop_back();
             perfix.push_back(ab[i]);
             second=perm(ab,perfix,i+1);
             res.insert(res.end(), second.begin(), second.end());
-            if(ab[i]==toupper(ab[i])){
-                ab[i]=toupper(ab[i]);
-            }else{
-                
-                ab[i]=tolower(ab[i]);
-            }
+            ab[i]^=32;
             perfix.pop_back();      
             
         }
