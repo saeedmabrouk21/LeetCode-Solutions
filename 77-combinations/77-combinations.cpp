@@ -10,7 +10,7 @@ public:
         perm(ab,res,perfix,k);
         return res;
     }
-    void perm(vector<int> ab,vector<vector<int>>& res,vector<int> perfix, int k){
+    void perm(vector<int> ab,vector<vector<int>>& res,vector<int> &perfix, int k){
         if(perfix.size()==k){
             res.push_back(perfix);
             return;               
