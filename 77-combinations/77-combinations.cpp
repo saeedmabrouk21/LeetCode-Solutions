@@ -6,20 +6,18 @@ public:
         for(int i = 1;i<=n;i++){
             ab[i-1]=i;
         }
-        return  perm(ab,perfix,k);
+        int start = 0;
+        return  perm(ab,perfix,k,start);
     }
-    vector<vector<int>> perm(vector<int> &ab,vector<int> &perfix, int &k){
+    vector<vector<int>> perm(vector<int> &ab,vector<int> &perfix, int &k,int start){
         vector<vector<int>> res;
         if(perfix.size()==k){
             res.push_back(perfix);
         }
-        for(int i = 0 ; i < ab.size();i++){
+        for(int i = start ; i < ab.size();i++){
             perfix.push_back(ab[i]);
-            auto start = ab.begin() + i+1;
-            auto end = ab.end();
-            vector<int> result(ab.size() - i -1);
-            copy(start, end, result.begin());
-            vector<vector<int>> second =perm(result,perfix,k);
+            
+            vector<vector<int>> second =perm(ab,perfix,k,++start);
             res.insert(res.end(), second.begin(), second.end());
             perfix.pop_back();
         }
