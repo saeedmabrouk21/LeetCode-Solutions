@@ -3,10 +3,11 @@ public:
     vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
         vector<vector<int>>ans;
         vector<int>perfix;
-        DFS(graph,ans,perfix,0);
+        int j = 0;
+        DFS(graph,ans,perfix,j);
         return ans;
     }
-    void DFS(vector<vector<int>> &graph,vector<vector<int>>&ans,vector<int>&perfix,int i){
+    void DFS(vector<vector<int>> &graph,vector<vector<int>>&ans,vector<int>&perfix,int &i){
         perfix.push_back(i);
         if(i==graph.size()-1){
             ans.push_back(perfix);
