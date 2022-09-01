@@ -12,13 +12,11 @@ public:
             for(int i = 0 ; i < rooms[c].size();i++){
                 if(vi[rooms[c][i]]==0){
                     ab.push(rooms[c][i]);
-                    cout<<rooms[c][i]<<" "<<c<<endl;
                     n++;
                     vi[rooms[c][i]]=1;
                 }
             }
         }
-        cout <<endl;
         if(n==rooms.size())
             return true;
         return false;
