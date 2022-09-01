@@ -9,12 +9,12 @@ public:
         while(!ab.empty()){
             int c=ab.front();
             ab.pop();
-            for(auto x:rooms[c]){
-                if(vi[x]==0){
-                    ab.push(x);
-                    cout<<x<<" "<<c<<endl;
+            for(int i = 0 ; i < rooms[c].size();i++){
+                if(vi[rooms[c][i]]==0){
+                    ab.push(rooms[c][i]);
+                    cout<<rooms[c][i]<<" "<<c<<endl;
                     n++;
-                    vi[x]=1;
+                    vi[rooms[c][i]]=1;
                 }
             }
         }
