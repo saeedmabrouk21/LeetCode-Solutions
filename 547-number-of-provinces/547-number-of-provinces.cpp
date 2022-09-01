@@ -13,7 +13,7 @@ public:
                     int c=ab.front();
                     ab.pop();
                     for(int i = 0 ; i < rooms[c].size();i++){
-                       
+        
                         if(rooms[c][i]==1&&vi[i]==0){
                             ab.push(i);
                             vi[i]=1;
