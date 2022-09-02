@@ -32,7 +32,6 @@ public:
             sum+=s->val;
             a--;
             if(a==0){
-                cout <<sum/count;
                 ans.push_back((double)sum/count);
             }
             if(s->right) {ab.push(s->right);b++;}
