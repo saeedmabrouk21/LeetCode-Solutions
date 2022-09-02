@@ -5,7 +5,6 @@ public:
         if(r*c != mat.size()*mat[0].size())
             return mat;
         vector<vector<int>> answer (r,vector<int>(c));
-        
         vector< vector<int>>::iterator qq = mat.begin();
         int v= 0 ;
         for(int i = 0 ; i < r ;i++){
@@ -14,8 +13,7 @@ public:
                     v=0;
                     qq++;
                     }
-                answer[i][j]=(*qq)[v];
-                v++;
+                answer[i][j]=(*qq)[v++];
             }
         }
         return answer;
