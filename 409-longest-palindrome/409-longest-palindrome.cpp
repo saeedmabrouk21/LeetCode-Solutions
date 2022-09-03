@@ -3,10 +3,8 @@ public:
     int longestPalindrome(string s) {
         vector<int> ab (2*26,0);
         for(auto x:s){
-            // cout <<"z";
             if(x<'a')
                 ab[x-'A'+26]++;
-                
             else
                 ab[x-'a']++;
         }
