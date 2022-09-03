@@ -3,7 +3,7 @@ public:
     int longestPalindrome(string s) {
         vector<int> ab (2*26,0);
         for(auto x:s){
-            cout <<"z";
+            // cout <<"z";
             if(x<'a')
                 ab[x-'A'+26]++;
                 
@@ -20,7 +20,6 @@ public:
                 ans+=(ab[i]-1);
             }
         }
-        
         return ans+zz;
     }
 };
