@@ -32,7 +32,6 @@ public:
             ab.clear();
             int x = (i%3)==0?0:(3*(i%3));
             int xx=(i/3)*3;
-            cout <<x<<" "<<x+3<<" -- "<<xx<<" "<<xx+3<<endl;
             for(int j =  x; j< (x+3);j++){
                 for(int k = xx ; k <(xx+3) ;k++){
                 
@@ -41,7 +40,6 @@ public:
                             ab.insert(board[j][k]);
 
                         }else{
-                            cout <<board[j][k];
                             return false;
                         }
                     }
