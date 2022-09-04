@@ -16,7 +16,6 @@ public:
         vector<string> second=perm(ab,perfix,i+1);
         res.insert(res.end(), second.begin(), second.end());
         if(!(ab[i]>='0' &&ab[i]<='9')){
-           
             ab[i]^=32;
             perfix.pop_back();
             perfix.push_back(ab[i]);
