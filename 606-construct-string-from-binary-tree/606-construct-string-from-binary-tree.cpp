@@ -22,24 +22,22 @@ public:
             return ;
         }
         ans=ans+to_string(root->val);
-        ans.push_back('(');
-        int x = 0;
+        
         if(root->left){
-            x=1;
+            ans.push_back('(');
             preorder(root->left,ans);
-            
+            ans.push_back(')');
+            }else{
+            if(root->right){
+                ans=ans+"()";
             }
-        ans.push_back(')');
+        }
+        
         if(root->right){
             ans.push_back('(');
             preorder(root->right,ans);
             ans.push_back(')');
-        }else{
-            if(x==0){
-            ans.pop_back();
-            ans.pop_back();
-        }}
-            
+        }
       
        
         
