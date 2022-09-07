@@ -12,7 +12,6 @@
 class Solution {
 public:
     string tree2str(TreeNode* root) {
-        
         return preorder(root);
     }
     string preorder(TreeNode* root){
@@ -20,8 +19,6 @@ public:
             return "";
         }
         string ans = to_string(root->val); ;
-        
-        
         if(root->left){
             ans+="(";
             ans+=preorder(root->left);
@@ -35,7 +32,7 @@ public:
         if(root->right){
             ans+="(";
             ans+=preorder(root->right);
-            ans.push_back(')');
+            ans+=(')');
         }
       
         return ans;
