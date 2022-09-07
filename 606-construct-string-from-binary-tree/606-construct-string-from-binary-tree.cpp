@@ -23,15 +23,12 @@ public:
             
             ans=ans+"("+preorder(root->left)+")";
             
-            }else{
-            if(root->right){
-                ans=ans+"()";
-            }
         }
         
-        if(root->right){
+        if(root->right&&root->left){
             ans=ans + "(" + preorder(root->right)+(")");
-            
+        }else if(root->right){
+            ans=ans + "()(" + preorder(root->right)+(")");
         }
       
         return ans;
