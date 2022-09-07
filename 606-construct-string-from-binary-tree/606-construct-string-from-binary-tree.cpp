@@ -12,21 +12,20 @@
 class Solution {
 public:
     string tree2str(TreeNode* root) {
-        string ans;
-        preorder(root,ans);
         
-        return ans;
+        return preorder(root);
     }
-    void preorder(TreeNode* root,string &ans){
+    string preorder(TreeNode* root){
         if(root==NULL){
-            return ;
+            return "";
         }
-        ans=ans+to_string(root->val);
+        string ans = to_string(root->val); ;
+        
         
         if(root->left){
-            ans.push_back('(');
-            preorder(root->left,ans);
-            ans.push_back(')');
+            ans+="(";
+            ans+=preorder(root->left);
+            ans+=")";
             }else{
             if(root->right){
                 ans=ans+"()";
@@ -34,11 +33,12 @@ public:
         }
         
         if(root->right){
-            ans.push_back('(');
-            preorder(root->right,ans);
+            ans+="(";
+            ans+=preorder(root->right);
             ans.push_back(')');
         }
       
+        return ans;
        
         
     }
