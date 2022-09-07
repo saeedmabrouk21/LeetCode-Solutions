@@ -20,9 +20,9 @@ public:
         }
         string ans = to_string(root->val); ;
         if(root->left){
-            ans+="(";
-            ans+=preorder(root->left);
-            ans+=")";
+            
+            ans=ans+"("+preorder(root->left)+")";
+            
             }else{
             if(root->right){
                 ans=ans+"()";
@@ -30,9 +30,8 @@ public:
         }
         
         if(root->right){
-            ans+="(";
-            ans+=preorder(root->right);
-            ans+=(')');
+            ans=ans + "(" + preorder(root->right)+(")");
+            
         }
       
         return ans;
