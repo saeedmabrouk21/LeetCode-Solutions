@@ -24,7 +24,7 @@ public:
         if(!tt){
             tt=root;
         }else{
-            cout <<root->val <<" "<<tt->val<<endl;
+            // cout <<root->val <<" "<<tt->val<<endl;
             if(root->val <= tt->val)
                 return false;
             tt->val = root->val;
