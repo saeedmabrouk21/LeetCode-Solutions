@@ -23,7 +23,6 @@ public:
         
         if(root->val <= val)
             return false;
-        cout <<val<<" "<<root->val<<endl;
         val = root->val;
         
          if(root->right)
