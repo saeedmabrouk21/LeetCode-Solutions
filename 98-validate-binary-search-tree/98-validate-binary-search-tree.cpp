@@ -12,21 +12,27 @@
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        long long int  val = -2147483649;
-        return valid(root,val);
+        TreeNode* tt=NULL;
+        return valid(root,tt);
     }
   
-    bool valid(TreeNode* root , long long int& val){
+    bool valid(TreeNode* root ,TreeNode* &tt){
         bool a=true,b=true;
         if(root->left)
-            a = valid(root->left,val);
+            a = valid(root->left,tt);
         
-        if(root->val <= val)
-            return false;
-        val = root->val;
+        if(!tt){
+            tt=root;
+        }else{
+            cout <<root->val <<" "<<tt->val<<endl;
+            if(root->val <= tt->val)
+                return false;
+            tt->val = root->val;
+        }
+        
         
          if(root->right)
-            b = valid(root->right,val);
+            b = valid(root->right,tt);
         
         return a&&b;
         
