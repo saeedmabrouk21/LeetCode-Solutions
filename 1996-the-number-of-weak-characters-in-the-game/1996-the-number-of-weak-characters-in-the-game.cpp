@@ -13,6 +13,7 @@ public:
 
     int numberOfWeakCharacters(vector<vector<int>>& p) {
         sort(p.begin(), p.end(), comp);
+       
         int mtn = INT_MIN;                                //max till now while moving from right
           int ans = 0;
 
