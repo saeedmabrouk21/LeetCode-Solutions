@@ -5,14 +5,17 @@ public:
         vector<int>ans;
         if(p.size()>s.size())
             return ans;
-        vector<int> freq(26,0);
+        int freq[26]={0};
         for(int i = 0 ; i < p.size();i++){
             freq[p[i]-'a']++;
             
         }
         
         for(int i = 0 ; i < s.size()-p.size()+1;i++){
-            vector<int>freq2=freq;  
+            int freq2[26];
+            for(int k = 0 ; k < 26;k++){
+                freq2[k]=freq[k];
+            }
             int t = p.size();
             for(int j = i ; j < i+p.size();j++){
                 if(freq2[s[j]-'a']>0){
