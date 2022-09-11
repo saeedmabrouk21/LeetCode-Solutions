@@ -15,9 +15,9 @@ public:
         while(root && root->val!=val ){
             
             if(root->val > val)
-                root=root->left ? root->left :NULL;
+                root=root->left ;
             else
-                root=root->right?root->right:NULL;
+                root=root->right;
         }
         return root;
     }
