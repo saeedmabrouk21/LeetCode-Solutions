@@ -7,7 +7,6 @@ class Solution {
         int i = a;
         int x ;
         int j;
-        System.out.println(a + " " + b);
         while(i<=b){
             if(s.charAt(i)>='0' &&s.charAt(i)<='9'){
                 
