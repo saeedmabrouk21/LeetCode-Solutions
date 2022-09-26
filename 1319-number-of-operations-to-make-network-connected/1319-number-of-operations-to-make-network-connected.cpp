@@ -14,11 +14,12 @@ public:
         }
         vector<bool> visited(n, false);
         int cl = 0 ;
-        
+        stack<int> ab;
+        stack<int> cd;
         for(int i = 0 ; i < n ;i++){
             if(visited[i]==false){
                 cl++;
-                stack<int> ab;
+                ab=cd;
                 ab.push(i);
                 visited[i]= true;
                 while(!ab.empty()){
