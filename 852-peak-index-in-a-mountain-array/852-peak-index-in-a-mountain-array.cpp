@@ -5,14 +5,7 @@ public:
          int end = arr.size()-2;
         while(start<=end){
             int mid = (start + end)/2;
-            // if(mid == 0 ){
-            //     start  = mid +1;
-            //     continue;
-            // }
-            //  if(mid == arr.size ){
-            //     start  = mid +1;
-            //     continue;
-            // }
+           
             if(arr[mid-1]<arr[mid]&& arr[mid+1]<arr[mid])
                 return mid;
             if (arr[mid-1]>arr[mid]&& arr[mid+1]<arr[mid]  ){
