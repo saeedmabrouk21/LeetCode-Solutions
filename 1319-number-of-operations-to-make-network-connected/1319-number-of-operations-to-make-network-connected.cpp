@@ -20,17 +20,13 @@ public:
                 cl++;
                 stack<int> ab;
                 ab.push(i);
-                cout<<i<<" ";
                 visited[i]= true;
                 while(!ab.empty()){
-                    
                     int cc = ab.top();ab.pop();
                     for(int j = 0 ; j < adj[cc].size();j++){
                         if(visited[adj[cc][j]]==false){
-                            cout<<j;
                             visited[adj[cc][j]]=true;
                             ab.push(adj[cc][j]);
-                            
                             }
                     }
                     
