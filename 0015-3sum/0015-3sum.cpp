@@ -23,7 +23,6 @@ public:
         for(int i = 0 ; i < nums.size()-2;i++){
             if(i==0 || nums[i]!=nums[i-1]){
                     int target = 0-nums[i];
-                cout <<"###"<<i;
                     int f=i+1;
                     vector<int> ad{nums[i],nums[f],0-nums[i]-nums[f]};
                     while(ss.count(ad)==1)
@@ -34,7 +33,6 @@ public:
                             vector<int> ab{nums[i],nums[f],nums[e]};
                             sort(ab.begin(),ab.end());
                             if(ss.count(ab)==0){
-                                cout<<i<<f<<e;
                                 aa.push_back(ab);
                                 ss.insert(ab);
                             }
