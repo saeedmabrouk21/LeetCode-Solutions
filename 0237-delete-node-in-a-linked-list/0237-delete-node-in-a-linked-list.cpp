@@ -8,8 +8,7 @@
  */
 class Solution {
 public:
-    void deleteNode(ListNode* node) {
-        ListNode *a = node;
+    void deleteNode(ListNode* a) {
         while(a->next->next!=NULL){
             a->val = a->next->val;
             a=a->next;
