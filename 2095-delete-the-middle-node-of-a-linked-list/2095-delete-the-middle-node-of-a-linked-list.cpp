@@ -15,7 +15,6 @@ public:
         ListNode* slow = head;
         ListNode* fast = head;
         while(fast->next && fast->next->next){
-           //cout <<"#@";
             brev = slow;
             slow = slow->next;
             fast = fast->next->next;
@@ -25,11 +24,9 @@ public:
             slow=slow->next;
         }
         if(brev==NULL){
-            //cout <<"aa";
             return slow->next;
         
         }else{
-          //  cout <<"ww";
             brev->next=slow->next;
             return head;
         }
