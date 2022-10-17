@@ -11,7 +11,7 @@ public:
         
         
     }
-     void dfs (vector<vector<int>>& grid, vector<vector<int>> &vi ,vector<int> & ans ,int x ,int y,int &qq){
+     void dfs (vector<vector<int>> grid, vector<vector<int>> &vi ,vector<int> & ans ,int x ,int y,int &qq){
           int arr [4][2]= {
             {0,1},
             {1,0},
