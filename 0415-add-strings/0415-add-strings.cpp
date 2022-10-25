@@ -8,15 +8,15 @@ public:
         int kk = 0 ;
         while(i >-1 || j>-1){
           //  cout <<"#";
-            cout <<kk<<endl;
+            //cout <<kk<<endl;
             if(i>-1)
                 kk += (a[i]-'0');
-            cout <<kk<<endl;
+            //cout <<kk<<endl;
             if(j>-1)
                 kk += (b[j]-'0');
-            cout <<kk<<endl;
+            //cout <<kk<<endl;
             kk+=rem ;
-            cout <<kk<<"    ";
+            //cout <<kk<<"    ";
             if(kk >9){
                 string bb  = string(1,(char)(kk%10+'0'));
                 sum = bb + sum;
