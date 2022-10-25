@@ -1,43 +1,44 @@
 class Solution {
 public:
     string addStrings(string a, string b) {
+        int sumSize = a.size()>b.size() ? a.size() : b.size();
+        string sum = string(sumSize+1,'0');
         int i = a.size()-1 ;
         int j = b.size()-1;
         int rem = 0;
-        string sum ="";
         int kk = 0 ;
         while(i >-1 || j>-1){
-          //  cout <<"#";
-            //cout <<kk<<endl;
+          
             if(i>-1)
                 kk += (a[i]-'0');
-            //cout <<kk<<endl;
+            
             if(j>-1)
                 kk += (b[j]-'0');
-            //cout <<kk<<endl;
+          
             kk+=rem ;
-            //cout <<kk<<"    ";
+            
+            int nextDigit = i>j?i:j;
+            //cout <<nextDigit<<endl;
             if(kk >9){
-                string bb  = string(1,(char)(kk%10+'0'));
-                sum = bb + sum;
+                
+                sum[nextDigit+1]=(char)(kk%10+'0');
                 rem  = 1;
             }else{
-                string bb  = string(1,(char)(kk+'0'));
-                //cout <<kk << "  "<< bb;
-                sum = bb + sum;
+                //cout <<kk<<endl;
+                //cout <<sum<<endl;
+                sum[nextDigit+1]=(char)(kk+'0');
+                //cout <<sum<<endl;
                 rem = 0;
             }
-            //rem = 0 ;
             kk = 0;
             i--;
             j--;
         } 
         if(rem!=0){
-            string bb  = string(1,(char)(rem+'0'));
-                    //cout <<kk << "  "<< bb;
-            sum = bb + sum;
+            sum[0]=(char)(1+'0');
+            return sum;
         }
-        return sum;
+        return sum.substr(1);
     
     }
 };
